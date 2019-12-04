@@ -1,15 +1,15 @@
-=== Susty WP ===
+=== Blogpocket Sustie ===
 
-Contributors: automattic
+Contributors: Antonio Cambronero
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 Requires at least: 4.5
-Tested up to: 4.9.5
-Stable tag: 1.0.0
+Tested up to: 5.3
+Stable tag: 0.1.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A sustainable theme called Susty WP.
+A sustainable and Gutenberg ready theme called Blogpocket Sustie.
 
 == Description ==
 
@@ -25,14 +25,15 @@ Description
 
 = Does this theme support any plugins? =
 
-Susty WP includes support for Infinite Scroll in Jetpack.
+Blogpocket Sustie includes support for Infinite Scroll in Jetpack and development of pages with Gutenberg. Use the Reusable Gutenberg Blocks Widget plugin to add Gutenberg blocks to the planned widget areas called Welcome and Goodbye.
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 0.1.0 - Dec 04 2019 =
 * Initial release
 
 == Credits ==
 
+* Based on Susty WP https://sustywp.com, (C) 2015 Jack Lennox
 * Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
