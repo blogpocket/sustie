@@ -1,7 +1,8 @@
-# Susty 🌍
+# Blogpocket Sustie 🌍
 
-Hello. I'm a super-lightweight theme called `Susty`. I have been built to demonstrate how small a WordPress site can be (just 6KB of data transfer, or 7 with Yoast!).
+Hello. I'm a super-lightweight theme called `Blogpocket Sustie` and I'm the little brother of the Susty WordPress theme.
+Just as my older brother was created to demonstrate how small a WordPress site can be, I come to show that anyone can design their own theme with Gutenberg.
+ 
+**Note:** I am an experiment of minimalism and demonstration of what you can build only with Gutenberg blocks, without coding anything. The purpose of this topic is to provide a code - sufficiently sufficient - to power the Sustie interface. You can watch the demo on [WebPremium Online] (https://webpremium.online). Therefore, as in Susty, it is not recommended that you continue and activate your blog or production website without first making some adjustments.
 
-**Note:** I am an experiment in minimalism, which means that the aim of this theme is to provide _just enough_ code to power the interface of [Susty WP](https://sustywp.com). It is therefore not recommended that you just go ahead and activate for your production blog or website without making some adjustments first.
-
-The goals of this theme are outlined in a blog post entitled, [Delivering WordPress in 7KB](https://blog.jacklenox.com/2018/06/04/delivering-wordpress-in-7kb/).
+More information about the installation, configuration, adjustments and objectives of this topic in the blog of https://webpremium.online.
