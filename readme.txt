@@ -34,6 +34,6 @@ Blogpocket Sustie includes support for Infinite Scroll in Jetpack and developmen
 
 == Credits ==
 
-* Based on Susty WP https://sustywp.com, (C) 2015 Jack Lennox
+* Based on Susty WP https://sustywp.com, (C) 2015 Jack Lenox
 * Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
