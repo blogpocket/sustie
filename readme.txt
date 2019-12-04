@@ -13,13 +13,28 @@ A sustainable and Gutenberg ready theme called Blogpocket Sustie.
 
 == Description ==
 
-Description
+Demo link: https://webpremium.online/
 
-== Installation ==
+## Purpose of the Blogpocket Sustie
 
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
+The purpose is purely didactic and academic, although the theme is fully operational to implement any website that one can imagine. Follow the recommendations to set up a fast, optimized mobile and sustainable website; safe and prepared for SEO. And to design the home page, edit it only with Gutenberg. Also compose with Gutenberg any other page that you will include on your website. With the theme Blogpocket Sustie you have a series of blank pages to design from scratch, easily, without distractions and without using complicated external tools. You have the full guarantee that the theme will work correctly because the basis is Susty WP theme. But you do the front-end design.
+
+## Propósito del theme Blogpocket Child Sustie (Español)
+
+El propósito es puramente didáctico y acádemico, aunque el theme es plenamente operativo para implementar cualquier sitio web que uno pueda imaginar. Sigue las recomendaciones para configurar un sitio web rápido, optimizado para móviles, sostenible (ecológico); seguro y preparado para el SEO. Y para diseñar la página home, edítala solo con Gutenberg. Compón también con Gutenberg cualquier otra página que vayas a incluir en su sitio web. Con el theme Blogpocket Sustie dispones de una serie de folios en blanco para diseñar desde cero, fácilmente, sin distracciones y sin hacer uso de complicadas herramientas externas. Tienes toda la garantía de que el theme va a funcionar correctamente porque la base es el theme Susty WP. Pero el diseño del front-end lo haces tú. 
+
+## Installation Instructions
+
+Make sure that WordPress version is at least 5.3
+
+1. Upload the Genesis Blogpocket theme folder via FTP to your wp-content/themes/ directory. (The Genesis parent theme needs to be in the wp-content/themes/ directory as well.)
+2. Go to your WordPress dashboard and select Appearance.
+3. Activate the Genesis Blogpocket theme.
+4. Inside your WordPress dashboard, go to Genesis > Theme Settings and configure them to your liking.
+
+## Theme Support
+
+Please visit https://webpremium.online/ for theme support.
 
 == Frequently Asked Questions ==
 
