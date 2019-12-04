@@ -1,4 +1,4 @@
-# Blogpocket Sustie 🌍
+# Blogpocket Sustie 🚀
 
 Hello. I'm a super-lightweight theme called `Blogpocket Sustie` and I'm the little brother of the [Susty WordPress theme](https://sustywp.com).
 Just as my older brother was created to demonstrate how small a WordPress site can be, I come to show that anyone can design their own theme with Gutenberg.
