@@ -13,6 +13,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Merriweather+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
+
 
 	<?php wp_head(); ?>
 </head>
@@ -27,10 +29,6 @@
 			<?php
 			if ( has_custom_logo() ) :
 				the_custom_logo();
-			else :
-				?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img alt="Susty WP logo" src="<?php echo esc_url( get_template_directory_uri() . '/images/eco-chat.svg' ); ?>"><span class="screen-reader-text"><?php esc_html_e( 'Home', 'susty' ); ?></span></a>
-				<?php
 			endif;
 			?>
 		</div>
@@ -60,12 +58,43 @@
 				<?php
 			else :
 				?>
-				<a href="<?php echo esc_url( ( get_option( 'permalink_structure' ) ? home_url( '/menu/' ) : home_url( '/?menu' ) ) ); ?>"><?php esc_html_e( 'Menu', 'susty' ); ?></a>
+				<a href="<?php echo esc_url( ( get_option( 'permalink_structure' ) ? home_url( '/menu/' ) : home_url( '/?menu' ) ) ); ?>"><?php esc_html_e( 'Menu' ); ?></a>
 				<?php
 			endif;
 		
 		endif;
-		?>
-	</header>
+		
+	?>
 
-	<div id="content">
+</header>
+
+<?php
+if ( is_home() && ! get_query_var( 'menu' ) ) {
+
+//Show the welcome area on the blog page
+
+?>
+
+
+
+
+							<div class="footer-widgets column-one grid-item">
+								<?php dynamic_sidebar( 'welcome' ); ?>
+							</div>
+
+						
+<?php } ?>
+
+
+<?php
+
+if ( is_front_page()  ) :
+?>
+	<div id="contenthome">
+<?php
+else :
+?>
+        <div id="content">
+<?php
+endif;
+?>

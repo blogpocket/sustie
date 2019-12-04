@@ -1,19 +1,19 @@
 /*!
-Theme Name: Susty
-Theme URI: https://sustywp.com
-Author: Jack Lenox
-Author URI: https://blog.jacklenox.com
+Theme Name: Blogpocket Sustie
+Theme URI: https://lanzatu.blog
+Author: Antonio Cambronero
+Author URI: https://www.blogpocket.com
 Description: A theme for WordPress focused on performance and sustainability.
-Version: 1.0.0
+Version: 0.0.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: susty
+Text Domain: sustie
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Susty is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Blogpocket Sustie is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc. and Susty https://sustywp.com by Jack Lenox.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
@@ -394,13 +394,14 @@ select,
 optgroup,
 textarea {
 	color: rgb(4, 4, 2);
-	font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "Nimbus Sans L", "Liberation Sans", Tahoma, Geneva, sans-serif;;
+	font-family: "Lato", sans-serif;
 	font-size: calc( 15px + 4 * (100vw / 1500));
 	line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+        font-family: 'Merriweather Sans';
 }
 
 p {
@@ -421,7 +422,7 @@ address {
 
 pre {
 	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-family: "Lato", sans-serif;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	line-height: 1.6;
@@ -432,7 +433,7 @@ pre {
 }
 
 code, kbd, tt, var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-family: "Lato", sans-serif;;
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
@@ -892,11 +893,19 @@ svg * {
 /*--------------------------------------------------------------
 ## Content
 --------------------------------------------------------------*/
+
 #content {
-	max-width: 33em;
+	max-width: 39em;
 	margin: 0 auto;
 	padding: 0 1em;
 }
+
+#contenthome {
+        max-width: 100%;
+	margin: 0 auto;
+	padding: 0 0em;
+}
+
 
 article a, nav a {
 	background: rgb(252, 248, 243) none repeat scroll 0% 0%;
@@ -938,4 +947,265 @@ footer#colophon {
 	text-align: center;
 	padding: 0 1em;
 	font-size: .75em;
+}
+
+.home .entry-title {display: none;}
+
+/* Widget Base ------------------------------- */
+
+.widget {
+	margin-top: 3rem;
+}
+
+.widget:first-child {
+	margin-top: 0;
+}
+
+.widget-content > div > *:first-child {
+	margin-top: 0;
+}
+
+.widget-content > div > *:last-child {
+	margin-bottom: 0;
+}
+
+.widget .widget-title {
+	margin: 0 0 2rem;
+}
+
+.widget li {
+	margin: 2rem 0 0 0;
+}
+
+.widget li:first-child,
+.widget li > ul,
+.widget li > ol {
+	margin-top: 0;
+}
+
+.widget table,
+.widget table * {
+	border-color: #dedfdf;
+}
+
+.widget table caption {
+	background-color: #dedfdf;
+}
+
+.widget .post-date,
+.widget .rss-date {
+	color: #6d6d6d;
+	display: block;
+	font-size: 0.85em;
+	font-weight: 500;
+	margin-top: 0.2rem;
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/* Font Families ----------------------------- */
+
+.widget_text p,
+.widget_text ol,
+.widget_text ul,
+.widget_text dl,
+.widget_text dt,
+.widget-content .rssSummary {
+	font-family: NonBreakingSpaceOverride, "Hoefler Text", Garamond, "Times New Roman", serif;
+	letter-spacing: normal;
+}
+
+.widget-content cite,
+.widget-content figcaption,
+.widget-content .wp-caption-text {
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+@supports ( font-variation-settings: normal ) {
+
+	.widget-content cite,
+	.widget-content figcaption,
+	.widget-content .wp-caption-text {
+		font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	}
+}
+
+/* Base List Widget -------------------------- */
+
+.widget_archive ul,
+.widget_categories ul,
+.widget_pages ul,
+.widget_meta ul,
+.widget_nav_menu ul,
+.widget_recent_comments ul,
+.widget_recent_entries ul,
+.widget_rss ul {
+	list-style: none;
+	margin: 0;
+}
+
+.widget_archive li,
+.widget_categories li,
+.widget_pages li,
+.widget_meta li,
+.widget_nav_menu li {
+	color: #6d6d6d;
+	margin: 0.3rem 0;
+}
+
+.widget_archive li li,
+.widget_categories li li,
+.widget_pages li li,
+.widget_meta li li,
+.widget_nav_menu li li {
+	margin-left: 2rem;
+}
+
+.widget_archive a,
+.widget_categories a,
+.widget_pages a,
+.widget_meta a,
+.widget_nav_menu a {
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.widget_archive a:focus,
+.widget_archive a:hover,
+.widget_categories a:focus,
+.widget_categories a:hover,
+.widget_pages a:focus,
+.widget_pages a:hover,
+.widget_meta a:focus,
+.widget_meta a:hover,
+.widget_nav_menu a:focus,
+.widget_nav_menu a:hover {
+	text-decoration: underline;
+}
+
+16. Site Footer
+/* -------------------------------------------------------------------------- */
+
+
+.footer-nav-widgets-wrapper,
+#site-footer {
+	background-color: #fff;
+	border-color: #dedfdf;
+	border-style: solid;
+	border-width: 0;
+}
+
+.footer-top-visible .footer-nav-widgets-wrapper,
+.footer-top-hidden #site-footer {
+	margin-top: 5rem;
+}
+
+.reduced-spacing.footer-top-visible .footer-nav-widgets-wrapper,
+.reduced-spacing.footer-top-hidden #site-footer {
+	border-top-width: 0.1rem;
+}
+
+.footer-top,
+.footer-widgets-outer-wrapper,
+#site-footer {
+	padding: 3rem 0;
+}
+
+
+/* Footer Top -------------------------------- */
+
+.footer-top {
+	display: flex;
+	border-bottom: 0.1rem solid #dedfdf;
+	justify-content: space-between;
+}
+
+/* FOOTER MENU */
+
+.footer-menu {
+	font-size: 1.8rem;
+	font-weight: 700;
+	letter-spacing: -0.0277em;
+}
+
+.footer-menu li {
+	line-height: 1.25;
+	margin: 0.25em 0 0 0;
+}
+
+.footer-menu a {
+	text-decoration: none;
+}
+
+.footer-menu a:hover,
+.footer-menu a:focus {
+	text-decoration: underline;
+}
+
+/* FOOTER SOCIAL */
+
+.footer-social-wrapper {
+	margin: 0;
+	width: 100%;
+}
+
+.has-footer-menu .footer-social-wrapper {
+	flex-shrink: 0;
+	margin-left: 1rem;
+	width: 50%;
+}
+
+ul.footer-social {
+	margin: -0.5rem 0 0 -0.5rem;
+}
+
+.has-footer-menu .footer-social {
+	justify-content: flex-end;
+}
+
+ul.footer-social li {
+	margin: 0.5rem 0 0 0.5rem;
+}
+
+.footer-social a {
+	background-color: #cd2653;
+	height: 3.6rem;
+	width: 3.6rem;
+}
+
+.footer-social a::before {
+	font-size: 1.6rem;
+}
+
+/* Footer Widgets ---------------------------- */
+
+.footer-widgets-outer-wrapper {
+	border-bottom: 0.1rem solid #dedfdf;
+}
+
+.footer-widgets + .footer-widgets {
+	margin-top: 3rem;
+}
+
+/* Footer Bottom ----------------------------- */
+
+#site-footer {
+	font-size: 1.6rem;
+}
+
+#site-footer .section-inner {
+	align-items: baseline;
+	display: flex;
+	justify-content: space-between;
+}
+
+#site-footer a {
+	text-decoration: none;
+}
+
+#site-footer a:focus,
+#site-footer a:hover {
+	text-decoration: underline;
 }
