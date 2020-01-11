@@ -165,3 +165,61 @@ function susty_dequeue_dashicons() {
 		wp_deregister_style( 'dashicons' );
 	}
 }
+
+/**
+ * Register widget areas.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function goodbye_registration() {
+
+	// Arguments used in all register_sidebar() calls.
+	$shared_args = array(
+		'before_title'  => '<h2 class="widget-title subheading heading-size-3">',
+		'after_title'   => '</h2>',
+		'before_widget' => '<div class="widget %2$s"><div class="widget-content">',
+		'after_widget'  => '</div></div>',
+	);
+
+	// Goodbye #1.
+	register_sidebar(
+		array_merge(
+			$shared_args,
+			array(
+				'name'        => __( 'Goodbye #1', 'sustie' ),
+				'id'          => 'goodbye',
+				'description' => __( 'Widgets in this area will be displayed in the first column in the footer.', 'sustie' ),
+			)
+		)
+	);
+
+}
+
+add_action( 'widgets_init', 'goodbye_registration' );
+
+function welcome_registration() {
+
+	// Arguments used in all register_sidebar() calls.
+	$shared_args = array(
+		'before_title'  => '<h2 class="widget-title subheading heading-size-3">',
+		'after_title'   => '</h2>',
+		'before_widget' => '<div class="widget %2$s"><div class="widget-content">',
+		'after_widget'  => '</div></div>',
+	);
+
+	// Welcome #1.
+	register_sidebar(
+		array_merge(
+			$shared_args,
+			array(
+				'name'        => __( 'Welcome #1', 'sustie' ),
+				'id'          => 'welcome',
+				'description' => __( 'Widgets in this area will be displayed in the first column in the header of blog page.', 'sustie' ),
+			)
+		)
+	);
+
+}
+
+add_action( 'widgets_init', 'welcome_registration' );
+

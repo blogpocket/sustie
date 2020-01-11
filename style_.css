@@ -1,19 +1,22 @@
-/*
+/*!
 Theme Name: Blogpocket Sustie
-Theme URI: https://lanzatu.blog/sustie
-Description: El propósito es puramente didáctico y académico, aunque el tema es completamente operativo para implementar cualquier sitio web que uno pueda imaginar. Siga las recomendaciones para configurar un sitio web móvil rápido y optimizado, seguro y preparado para SEO. Y para diseñar la página de inicio, edítela solo con Gutenberg. También redacte con Gutenberg cualquier otra página que incluya en su sitio web. Con el tema Blogpocket Sustie se tiene una serie de páginas en blanco para diseñar desde cero, fácilmente, sin distracciones y sin usar herramientas externas complicadas. Tienes la garantía total de que el tema funcionará correctamente porque la base es el tema Susty de Jack Lennox. Pero tú haces el diseño del front-end.
-The purpose is purely didactic and academic, although the theme is fully operational to implement any website that one can imagine. Follow the recommendations to set up a fast and optimized mobile website, safe and prepared for SEO. And to design the home page, edit it only with Gutenberg. Also compose with Gutenberg any other page that you will include on your website. With the theme Blogpocket Sustie you have a series of blank pages to design from scratch, easily, without distractions and without using complicated external tools. You have the full guarantee that the theme will work correctly because the basis is Genesis's Susty theme by Jack Lennox. But you do the front-end design.
+Theme URI: https://webpremium.online
 Author: Antonio Cambronero
 Author URI: https://www.blogpocket.com
-
-Version: 1.0.0
-
-Tags: accessibility-ready, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, welcome-widget, welcome-single-post-page-widget, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks, Gutenberg ready, micro-blog
-
-License: GPL-2.0-or-later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-
+Description: A theme for WordPress focused on performance, sustainability and Gutenberg
+Version: 0.1.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
 Text Domain: sustie
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Blogpocket Sustie is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc. and Susty https://sustywp.com by Jack Lenox.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -108,7 +111,6 @@ pre {
 
 a {
 	background-color: transparent;
-        
 }
 
 /**
@@ -117,9 +119,9 @@ a {
  */
 
 abbr[title] {
-	border-bottom: none; /* 1 */ted
-
-	
+	border-bottom: none; /* 1 */
+	text-decoration: underline; /* 2 */
+	text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -253,7 +255,7 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-	outline: 1px ButtonText;
+	outline: 1px dotted ButtonText;
 }
 
 /**
@@ -400,7 +402,6 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
         font-family: 'Merriweather Sans';
-        
 }
 
 p {
@@ -438,7 +439,7 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-	border-bottom: 1px #666;
+	border-bottom: 1px dotted #666;
 	cursor: help;
 }
 
@@ -614,12 +615,12 @@ a:visited {
 
 a:hover, a:focus, a:active {
 	/*color: midnightblue;*/
-	text-decoration: none;
+	border-bottom-style: solid;
 	border-bottom-color: inherit;
 }
 
 a:focus {
-	outline: thin;
+	outline: thin dotted;
 }
 
 a:hover, a:active {
@@ -907,24 +908,15 @@ svg * {
 
 
 article a, nav a {
-	text-decoration: underline;
-	border-bottom: 0.1em;
+	background: rgb(252, 248, 243) none repeat scroll 0% 0%;
+	border-bottom: 0.1em dotted;
 	line-height: 1.6em;
-}
-
-article h2 > a {
-        text-decoration: none;
-}
-
-article h2 > a:hover {
-        text-decoration: underline;
 }
 
 article > header > h1, article > header > h2 {
 	font-size: 1.4em;
 	line-height: 1em;
 	margin: 0 0 .4em 0;
-        
 }
 
 .entry-meta {
