@@ -211,10 +211,26 @@ function tutsplus_widgets_init() {
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
     ) );
+
+    // Welcome widget area definition
+    register_sidebar( array(
+	'id'            => 'welcome',
+	'name'          => __( 'Welcome', 'blogpocket' ),
+	'description'   => __( 'This area widget will appear only on the entries page', 'blogpocket' ),
+   ) );
+
+   // Welcome for individual post pages widget area definition
+   register_sidebar( array(
+	'id'            => 'welcome-single',
+	'name'          => __( 'Welcome Single', 'blogpocket' ),
+	'description'   => __( 'This area widget will appear only on the individual post page', 'blogpocket' ),
+) );
+
          
 }
  
 // Register sidebars by running tutsplus_widgets_init() on the widgets_init hook.
 add_action( 'widgets_init', 'tutsplus_widgets_init' );
+
 
 
