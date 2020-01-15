@@ -5,7 +5,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 
 Requires at least: 5.3
 Tested up to: 5.3
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
@@ -44,6 +44,7 @@ Blogpocket Sustie includes support for Infinite Scroll in Jetpack and developmen
 
 == Changelog ==
 
+= 1.1.0 - Jan 15 2019 * Release with widgets. You can add 1 to 4 optional widgets in the footer of all pages except home.
 = 1.0.0 - Jan 11 2019 * Style correction. Version without widgets. Version without post formats.
 = 0.1.0 - Dec 04 2019 * Initial release
 

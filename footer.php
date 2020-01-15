@@ -18,7 +18,10 @@ if ( is_front_page()  ) :
 <?php
 else :
 ?>
+
+        <div class="footer-contenedor">
         <?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
+        </div>
 <?php
 endif;
 ?>

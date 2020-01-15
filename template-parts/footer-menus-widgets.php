@@ -7,41 +7,101 @@
  * @subpackage Sustie
  * @since 1.0.0
  */
+?>
+<footer>
 
-$has_goodbye = is_active_sidebar( 'goodbye' );
+<?php
+    /* Code from https://code.tutsplus.com/es/tutorials/dynamically-adding-four-footer-widget-areas--cms-22168 
+    /* The footer widget area is triggered if any of the areas
+     * have widgets. So let's check that first.
+     *
+     * If none of the sidebars have widgets, then let's bail early.
+     */
+    if (   ! is_active_sidebar( 'first-footer-widget-area'  )
+        && ! is_active_sidebar( 'second-footer-widget-area' )
+        && ! is_active_sidebar( 'third-footer-widget-area'  )
+        && ! is_active_sidebar( 'fourth-footer-widget-area' )
+    ) {
+        return;
+    }
+        if (   is_active_sidebar( 'first-footer-widget-area'  )
+    && is_active_sidebar( 'second-footer-widget-area' )
+    && is_active_sidebar( 'third-footer-widget-area'  )
+    && is_active_sidebar( 'fourth-footer-widget-area' )
+) { ?>
+ 
+<aside class="fatfooter" role="complementary">
+    <div class="first quarter left widget-area">
+        <?php dynamic_sidebar( 'first-footer-widget-area' ); ?>
+    </div><!-- .first .widget-area -->
+ 
+    <div class="second quarter widget-area">
+        <?php dynamic_sidebar( 'second-footer-widget-area' ); ?>
+    </div><!-- .second .widget-area -->
+ 
+    <div class="third quarter widget-area">
+        <?php dynamic_sidebar( 'third-footer-widget-area' ); ?>
+    </div><!-- .third .widget-area -->
+ 
+    <div class="fourth quarter right widget-area">
+        <?php dynamic_sidebar( 'fourth-footer-widget-area' ); ?>
+    </div><!-- .fourth .widget-area -->
+</aside><!-- #fatfooter -->
+  <?php }
+   
+elseif ( is_active_sidebar( 'first-footer-widget-area'  )
+    && is_active_sidebar( 'second-footer-widget-area' )
+    && is_active_sidebar( 'third-footer-widget-area'  )
+    && ! is_active_sidebar( 'fourth-footer-widget-area' )
+) { ?>
+<aside class="fatfooter" role="complementary">
+    <div class="first one-third left widget-area">
+        <?php dynamic_sidebar( 'first-footer-widget-area' ); ?>
+    </div><!-- .first .widget-area -->
+ 
+    <div class="second one-third widget-area">
+        <?php dynamic_sidebar( 'second-footer-widget-area' ); ?>
+    </div><!-- .second .widget-area -->
+ 
+    <div class="third one-third right widget-area">
+        <?php dynamic_sidebar( 'third-footer-widget-area' ); ?>
+    </div><!-- .third .widget-area -->
+ 
+</aside><!-- #fatfooter -->
+<?php }
+elseif ( is_active_sidebar( 'first-footer-widget-area'  )
+    && is_active_sidebar( 'second-footer-widget-area' )
+    && ! is_active_sidebar( 'third-footer-widget-area'  )
+    && ! is_active_sidebar( 'fourth-footer-widget-area' )
+) { ?>
+<aside class="fatfooter" role="complementary">
+    <div class="first half left widget-area">
+        <?php dynamic_sidebar( 'first-footer-widget-area' ); ?>
+    </div><!-- .first .widget-area -->
+ 
+    <div class="second half right widget-area">
+        <?php dynamic_sidebar( 'second-footer-widget-area' ); ?>
+    </div><!-- .second .widget-area -->
+ 
+</aside><!-- #fatfooter -->
+<?php }
+elseif ( is_active_sidebar( 'first-footer-widget-area'  )
+    && ! is_active_sidebar( 'second-footer-widget-area' )
+    && ! is_active_sidebar( 'third-footer-widget-area'  )
+    && ! is_active_sidebar( 'fourth-footer-widget-area' )
+) {
+?>
+<aside class="fatfooter" role="complementary">
+    <div class="first full-width widget-area">
+        <?php dynamic_sidebar( 'first-footer-widget-area' ); ?>
+    </div><!-- .first .widget-area -->
+ 
+</aside><!-- #fatfooter -->
+<?php }
 
-// Only output the container if there are elements to display.
-if ( $has_goodbye ) {
-	?>
+    //end of all sidebar checks.
+    ?>
+    </footer>
 
-	<div class="footer-nav-widgets-wrapper header-footer-group">
-
-		<div class="footer-inner section-inner">
-
-			
-
-			<?php if ( $has_goodbye ) { ?>
-
-				<aside class="footer-widgets-outer-wrapper" role="complementary">
-
-					<div class="footer-widgets-wrapper">
-
-						<?php if ( $has_goodbye ) { ?>
-
-							<div class="footer-widgets column-one grid-item">
-								<?php dynamic_sidebar( 'goodbye' ); ?>
-							</div>
-
-						<?php } ?>
-
-					</div><!-- .footer-widgets-wrapper -->
-
-				</aside><!-- .footer-widgets-outer-wrapper -->
-
-			<?php } ?>
-
-		</div><!-- .footer-inner -->
-
-	</div><!-- .footer-nav-widgets-wrapper -->
-
-<?php } ?>
+    <br clear="all" />
+    

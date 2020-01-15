@@ -6,7 +6,7 @@ The purpose is purely didactic and academic, although the theme is fully operati
 Author: Antonio Cambronero
 Author URI: https://www.blogpocket.com
 
-Version: 1.0.0
+Version: 1.1.0
 
 Tags: accessibility-ready, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, welcome-widget, welcome-single-post-page-widget, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks, Gutenberg ready, micro-blog
 
@@ -1216,4 +1216,109 @@ ul.footer-social li {
 #site-footer a:focus,
 #site-footer a:hover {
 	text-decoration: underline;
+}
+
+
+/* Code from https://code.tutsplus.com/es/tutorials/dynamically-adding-four-footer-widget-areas--cms-22168 */
+/* floats */
+.quarter,
+.one-third,
+.two-thirds,
+.half {
+    float: left;
+}
+
+/* widths */
+.one-third {
+    width: 32%;
+}
+.two-thirds {
+    width: 65.5%;
+}
+.quarter {
+    width: 23.5%;
+}
+.three-quarters {
+    width: 74.5%;
+}
+.half {
+    width: 48%;
+}
+
+/* margins  */
+.one-third {
+    margin: 0 0.5%;
+}
+.quarter,
+.two-thirds {
+    margin: 0 0.5%;
+}
+.left,
+.quarter.left,
+.one-third.left {
+    margin: 0 1% 0 0;
+    float: left;
+}
+.right,
+.quarter.right,
+.one-third.right {
+    margin: 0 0 0 1%;
+    float: right;
+}
+.half.left {
+    width: 48%;
+    margin: 0 2% 0 0;
+}
+.half.right {
+    width: 48%;
+    margin: 0 0 0 1%;
+}
+.two-thirds.left {
+    margin: 0 2% 0 0;
+}
+.two-thirds.right {
+    margin: 0 0 0 1%;
+    float: right;
+}
+
+/* media queries for larger screens such as small tablets in landscape or large tablets in portrait */
+@media screen and ( max-width: 780px ) {
+     
+    /* only the .quarter layout class is relevant here - all other classes will have full width */
+    .quarter {
+        width: 48%;
+    }
+    .quarter.left {
+        margin-right: 2%;
+    }
+    .quarter.right {
+        margin-left: 2%;
+    }
+    footer .third.quarter.widget-area {
+        clear: both;
+    }
+}
+ 
+/* media queries for small screens in landscape mode (or similar) */
+@media screen and ( max-width: 600px ) {
+     
+    /* width sizing all full width in small screens */
+    .quarter,
+    .one-third,
+    .half,
+    .two-thirds,
+    .three-quarters,
+    .full-width {
+        width: 100%;
+        margin: 0;
+    }
+    /* padding adjustments */
+    .widget-area {
+        padding: 0 0 10px 0;
+    }
+}
+
+.footer-contenedor {
+    margin-left:20px;
+    margin-right: 20px;
 }
