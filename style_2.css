@@ -438,7 +438,7 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-	border-bottom: 0px #666;
+	border-bottom: 1px #666;
 	cursor: help;
 }
 
@@ -600,11 +600,9 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	color: rgb(4, 4, 2);
-	text-decoration: underline;
-	border-bottom: 0em solid transparent;
+	text-decoration: none;
+	border-bottom: 0.2em solid transparent;
 }
-
-
 
 a#susty-back-link {
 	padding: .3em .6em;
@@ -617,7 +615,7 @@ a:visited {
 a:hover, a:focus, a:active {
 	/*color: midnightblue;*/
 	text-decoration: none;
-	
+	border-bottom-color: inherit;
 }
 
 a:focus {
@@ -863,7 +861,6 @@ header#masthead h1, header#masthead p {
 
 header#masthead a {
 	border-bottom: unset;
-	text-decoration: none;
 }
 
 header#masthead > a {
@@ -1096,7 +1093,7 @@ footer#colophon {
 	text-decoration: underline;
 }
 
-/* 16. Site Footer */
+16. Site Footer
 /* -------------------------------------------------------------------------- */
 
 
